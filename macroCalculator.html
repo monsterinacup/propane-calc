@@ -1,15 +1,18 @@
+<head>
 <script src="generateMacros.js">
 </script>
+<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
 
-<table cellpadding="5" style="vertical-align:middle, text-align:left">
+<table cellpadding="5" style="vertical-align:middle">
 	<form name="inputForm" action="">
-	<caption align="bottom" style="font-size:12px">Enter your bodyweight, select whether you want "Fat Loss" or "Muscle Gain" from the drop down menu and hit the Generate Macros button!</caption>
+	<caption align="bottom" style="font-size:10px; font-family:verdana">Enter your bodyweight, select whether you want "Fat Loss" or "Muscle Gain" from the drop down menu and hit the Generate Macros button.</caption>
 	<tbody>
 		<tr><td></td></tr>
 		<tr>
 			<td></td>
 			<td>Are you male or female?</td>
-			<td><select name="gender" id="gender" style="width: 120px">
+			<td><select class="input" name="gender" id="gender" style="width: 120px">
 				<option value="male">Male</option>
 				<option value="female">Female</option>
 				</select></td>
@@ -35,7 +38,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td colspan="2"><input type="button" size="12" onclick="generateMacros()" value="Generate Macros" name="Generate Macros" style="width: 300px"></td>
+			<td colspan="2"><input type="button" onclick="generateMacros()" value="Generate Macros" name="Generate Macros" style="width: 282px"></td>
 			<td></td>
 		</tr>
 	</form>
@@ -43,16 +46,16 @@
 		<tr><td></td></tr>
 		<tr><td></td></tr>
 		<tr>
-			<th style="text-align:left"><p style="padding-left:3px">Daily Calories</p></th>
-			<th style="text-align:left"><p style="padding-left:3px">Protein (g)</p></th>
-			<th style="text-align:left"><p style="padding-left:3px">Carbs (g)</p></th>
-			<th style="text-align:left"><p style="padding-left:3px">Fat (g)</p></th>
+			<th>Calories (kcal)</th>
+			<th>Protein (g)</th>
+			<th>Carbs (g)</th>
+			<th>Fat (g)</th>
 		</tr>
 		<tr>
-			<td><input name="calories" style="width: 120px" readonly></td>
-			<td><input name="protein" style="width: 120px" readonly></td>
-			<td><input name="carbs" style="width: 120px"readonly></td>
-			<td><input name="fat"  style="width: 120px"readonly></td>
+			<td class="outputNumbers"><input name="calories"readonly></td>
+			<td class="outputNumbers"><input name="protein" readonly></td>
+			<td class="outputNumbers"><input name="carbs" readonly></td>
+			<td class="outputNumbers"><input name="fat" readonly></td>
 		</tr>	
 		<tr><td></td><td><br></td></tr>
 	</tbody>
